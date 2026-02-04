@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now | Premium Delivery</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ORDER<span>NOW</span></div>
+            <div class="cart-icon" id="cart-btn">
+                  <span id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main id="menu-container">
+        </main>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Tu Pedido</h2>
+            <button id="close-cart">✕</button>
+        </div>
+        <div id="cart-items-container" class="cart-items-list"></div>
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total:</span>
+                <span id="cart-total-price">0.00€</span>
+            </div>
+            <button id="btn-checkout" class="btn-checkout">Tramitar Pedido</button>
+            <button id="open-modal-empty" class="btn-text">Vaciar Carrito</button>
+        </div>
+    </div>
+
+    <div id="modal-confirm" class="modal">
+        <div class="modal-content">
+            <h3>¿Vaciar el carrito?</h3>
+            <p>Se perderán todos los productos seleccionados.</p>
+            <div class="modal-buttons">
+                <button id="confirm-vaciar" class="btn-danger">Sí, vaciar</button>
+                <button id="cancel-vaciar" class="btn-sec">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

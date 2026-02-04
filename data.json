@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "lastUpdated": "2026-02-02",
+    "source": "Order Now - Gastro Agency"
+  },
+  "items": [
+    {
+      "id": 1,
+      "categoria": "Burgers",
+      "nombre": "Alpha Burger",
+      "descripcion": "Carne madurada, queso cheddar y salsa secreta.",
+      "precio": 14.50,
+      "imagen": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=500"
+    },
+    {
+      "id": 2,
+      "categoria": "Vegan",
+      "nombre": "Beta Bowl",
+      "descripcion": "Quinoa, aguacate, edamame y aliño de sésamo.",
+      "precio": 12.00,
+      "imagen": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=500"
+    },
+    {
+      "id": 3,
+      "categoria": "Pizza",
+      "nombre": "Gamma Pizza",
+      "descripcion": "Masa madre, mozzarella de búfala y albahaca fresca.",
+      "precio": 13.20,
+      "imagen": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=500"
+    },
+    {
+      "id": 4,
+      "categoria": "Postres",
+      "nombre": "Delta Cake",
+      "descripcion": "Pastel de chocolate belga con núcleo fundido.",
+      "precio": 6.50,
+      "imagen": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=500"
+    }
+  ]
+}
