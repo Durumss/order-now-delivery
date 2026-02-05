@@ -32,12 +32,21 @@ async function iniciarApp() {
     }
 }
 
-// 2. RENDERIZAR MENÚ PRINCIPAL
+
+// 2. RENDERIZAR MENÚ DIVIDIDO POR CATEGORÍAS
 function renderizarMenu(items) {
-    const container = document.getElementById('menu-container');
-    container.innerHTML = items.map(plato => `
+    // Filtramos los arrays
+    const principales = items.filter(item => item.categoria === "Principales");
+    const postres = items.filter(item => item.categoria === "Postres");
+
+    // Seleccionamos los contenedores
+    const containerPrincipales = document.getElementById('container-principales');
+    const containerPostres = document.getElementById('container-postres');
+
+    // Función auxiliar para generar el HTML de una lista de productos
+    const generarHTML = (lista) => lista.map(plato => `
         <div class="card-plato">
-            <img src="${plato.imagen}" alt="${plato.nombre}">
+            <img src="${plato.imagen}" alt="${plato.nombre}" loading="lazy">
             <div class="info">
                 <h3>${plato.nombre}</h3>
                 <p>${plato.descripcion}</p>
@@ -48,6 +57,10 @@ function renderizarMenu(items) {
             </div>
         </div>
     `).join('');
+
+    // Inyectamos el HTML en cada sección
+    containerPrincipales.innerHTML = generarHTML(principales);
+    containerPostres.innerHTML = generarHTML(postres);
 }
 
 // 3. LÓGICA DEL CARRITO

@@ -63,11 +63,41 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 /* =========================================
    3. GRID DE PRODUCTOS (MENU)
    ========================================= */
-#menu-container { 
+/* Títulos de sección */
+.seccion-menu {
+    padding: 2rem 10% 0 10%; /* Espaciado lateral */
+}
+
+.titulo-seccion {
+    font-size: 2rem;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Pequeña línea decorativa debajo del título */
+.titulo-seccion::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+/* GRID Reutilizable (Reemplaza al antiguo #menu-container) */
+.menu-grid { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 2.5rem; 
-    padding: 3rem 10%; 
+    padding-bottom: 3rem; /* Espacio abajo de cada grid */
+}
+
+/* En móviles, reducimos el padding lateral */
+@media (max-width: 768px) {
+    .seccion-menu { padding: 1rem 5% 0 5%; }
 }
 
 .card-plato { 
