@@ -108,15 +108,32 @@ nav { display: flex; justify-content: space-between; align-items: center; }
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
     position: relative; 
     border: 1px solid rgba(0,0,0,0.02);
+    /*Para alinear contenido */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .card-plato:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.12); }
 .card-plato img { width: 100%; height: 220px; object-fit: cover; }
-.info { padding: 1.5rem; }
+.info { 
+    padding: 1.5rem; 
+    /*Ocupa el espacio disponible y organiza verticalmente */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 .info h3 { margin: 0 0 0.5rem 0; font-size: 1.2rem; }
 .info p { color: #7f8c8d; font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.5; }
 
-.precio-row { display: flex; justify-content: space-between; align-items: center; }
+.precio-row { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    /* El truco mágico para alinearlos al fondo */
+    margin-top: auto; 
+    padding-top: 1rem; /* Un poco de aire extra arriba */
+}
 .precio-row strong { font-size: 1.3rem; color: var(--dark); }
 
 .btn-add { 
